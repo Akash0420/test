@@ -33,7 +33,7 @@ jobs:
           echo "::set-output name=name::$(echo $MANIFEST | jq -r '.name')"
           echo "::set-output name=framework::$(echo $MANIFEST | jq -r '.framework')"
 
-      - name: Check framework
+      - name: using the value in condition and Checking framework
         run: |
           FRAMEWORK=$(echo "${{ steps.parse_manifest.outputs.framework }}")
           if [ "$FRAMEWORK" == "React" ]; then
