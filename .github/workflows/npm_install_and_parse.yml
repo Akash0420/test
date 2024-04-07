@@ -21,9 +21,10 @@ jobs:
         with:
           node-version: '14'
 
-      - name: npm install
+      - name: Install dependencies
+        shell: bash
         run: npm install
-
+    
       - name: Parse manifest.json
         id: parse_manifest
         run: |
